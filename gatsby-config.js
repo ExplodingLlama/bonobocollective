@@ -44,6 +44,33 @@ module.exports = {
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-firestore`,
+      options: {
+        credential: require(`./credentials.json`),
+        appConfig: {
+          apiKey: "AIzaSyCN3ePr0FpQBojrEiBCsWXP3wgH7BeAw8w",
+          authDomain: "bonobocollective-c451a.firebaseapp.com",
+          databaseURL: "https://bonobocollective-c451a.firebaseio.com",
+          projectId: "bonobocollective-c451a",
+          storageBucket: "bonobocollective-c451a.appspot.com",
+          messagingSenderId: "997253542258",
+          appID: "1:997253542258:web:39aef278deadd71493adeb",
+        },
+        types: [
+          {
+            type: `BlogPost`,
+            collection: `blogposts`,
+            map: doc => ({
+              title: doc.title,
+              publishedOn: doc.publishedOn,
+              slug: doc.slug,
+              body: doc.body,
+            }),
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
