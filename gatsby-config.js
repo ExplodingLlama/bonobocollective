@@ -31,6 +31,22 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        customizeWebpackConfig: (config, { plugins }) => {
+          config.plugins.push(
+            plugins.define({
+              "process.env.PROJECT_ID": process.env.PROJECT_ID,
+              "process.env.PRIVATE_KEY_ID": process.env.PRIVATE_KEY_ID,
+              "process.env.PRIVATE_KEY": process.env.PRIVATE_KEY,
+              "process.env.CLIENT_EMAIL": process.env.CLIENT_EMAIL,
+              "process.env.CLIENT_ID": process.env.CLIENT_ID,
+            })
+          )
+        },
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
