@@ -3,15 +3,19 @@ import React from "react"
 import Layout from "../components/Layout"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import blogStyles from "./blog.module.scss"
+import moment from "moment"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allBlogPost {
+      allPost {
         edges {
           node {
+            id
             title
-            date
+            date {
+              _seconds
+            }
             slug
             body
           }
@@ -23,13 +27,16 @@ const BlogPage = () => {
     <Layout>
       <h1>Blog</h1>
       <ol className={blogStyles.posts}>
-        {data.allBlogPost.edges.map(edge => {
+        {data.allPost.edges.map(edge => {
+          if (edge.node.id === "dummy") {
+            return
+          }
           const path = `/blog/${edge.node.slug}`
           return (
             <li className={blogStyles.post}>
               <Link to={path}>
                 <h2>{edge.node.title}</h2>
-                <p>{edge.node.date}</p>
+                <p>{moment(edge.node.date._seconds).format("YYYY MM DD")}</p>
               </Link>
             </li>
           )

@@ -11,9 +11,10 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const res = await graphql(`
     query {
-      allBlogPost {
+      allPost {
         edges {
           node {
+            id
             slug
           }
         }
@@ -21,7 +22,10 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  res.data.allBlogPost.edges.forEach(edge => {
+  res.data.allPost.edges.forEach(edge => {
+    if (edge.node.id === "dummy") {
+      return
+    }
     createPage({
       component: blogTemplate,
       path: `/blog/${edge.node.slug}`,
