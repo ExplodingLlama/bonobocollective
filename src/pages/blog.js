@@ -1,6 +1,6 @@
 import React from "react"
 
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import blogStyles from "./blog.module.scss"
 import moment from "moment"
