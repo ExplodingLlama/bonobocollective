@@ -11,7 +11,7 @@ const BlogPage = () => {
         edges {
           node {
             title
-            publishedOn
+            date
             slug
             body
           }
@@ -29,7 +29,7 @@ const BlogPage = () => {
             <li className={blogStyles.post}>
               <Link to={path}>
                 <h2>{edge.node.title}</h2>
-                <p>{edge.node.publishedOn}</p>
+                <p>{edge.node.date}</p>
               </Link>
             </li>
           )

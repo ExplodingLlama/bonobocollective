@@ -47,23 +47,28 @@ module.exports = {
     {
       resolve: `gatsby-source-firestore`,
       options: {
-        credential: require(`./credentials.json`),
-        appConfig: {
-          apiKey: "AIzaSyCN3ePr0FpQBojrEiBCsWXP3wgH7BeAw8w",
-          authDomain: "bonobocollective-c451a.firebaseapp.com",
-          databaseURL: "https://bonobocollective-c451a.firebaseio.com",
-          projectId: "bonobocollective-c451a",
-          storageBucket: "bonobocollective-c451a.appspot.com",
-          messagingSenderId: "997253542258",
-          appID: "1:997253542258:web:39aef278deadd71493adeb",
+        credential: {
+          type: "service_account",
+          project_id: process.env.PROJECT_ID,
+          private_key_id: process.env.PRIVATE_KEY_ID,
+          private_key: process.env.PRIVATE_KEY,
+          client_email: process.env.CLIENT_EMAIL,
+          client_id: process.env.CLIENT_ID,
+          auth_uri: "https://accounts.google.com/o/oauth2/auth",
+          token_uri: "https://oauth2.googleapis.com/token",
+          auth_provider_x509_cert_url:
+            "https://www.googleapis.com/oauth2/v1/certs",
+          client_x509_cert_url:
+            "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-7s5kz%40bonobocollective-c451a.iam.gserviceaccount.com",
         },
+        appConfig: {},
         types: [
           {
             type: `BlogPost`,
             collection: `blogposts`,
             map: doc => ({
               title: doc.title,
-              publishedOn: doc.publishedOn,
+              date: doc.date,
               slug: doc.slug,
               body: doc.body,
             }),

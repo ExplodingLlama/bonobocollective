@@ -5,12 +5,10 @@ import Layout from "../components/layout"
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        date
-      }
-      html
+    blogPost(slug: { eq: $slug }) {
+      title
+      date
+      body
     }
   }
 `
@@ -18,11 +16,9 @@ export const query = graphql`
 const Blog = props => {
   return (
     <Layout>
-      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <p>{props.data.markdownRemark.frontmatter.date}</p>
-      <div
-        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-      ></div>
+      <h1>{props.data.blogPost.title}</h1>
+      <p>{props.data.blogPost.date}</p>
+      <div>{props.data.blogPost.body}</div>
     </Layout>
   )
 }
