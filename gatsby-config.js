@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Bonobo Collective`,
-    logo: { link: `https://bonobocollective.com`, image: `/icon.png` },
+    logo: { link: `/`, image: `/icon.png` },
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `Ratandeep Singh`,
   },
@@ -40,6 +40,17 @@ module.exports = {
           "Content-Type": "application/json",
         },
         name: `post`,
+      },
+    },
+    {
+      resolve: "gatsby-source-apiserver",
+      options: {
+        url: `https://us-central1-podshare-a436d.cloudfunctions.net/getAllLinks`,
+        method: "get",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        name: `clip`,
       },
     },
     `gatsby-plugin-sharp`,

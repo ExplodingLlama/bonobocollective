@@ -31,7 +31,7 @@ const BlogPage = () => {
       <ol className={blogStyles.posts}>
         {data.allPost.edges.map(edge => {
           if (edge.node.id === "dummy") {
-            return
+            return null
           }
           const path = `/blog/${edge.node.slug}`
           return (
