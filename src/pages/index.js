@@ -26,9 +26,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <AudioPlayer
-        src={`${
-          clips.allClip.edges[0].node.audio_link
-        }#t=${clips.allClip.edges[0].node.start_time.toString()},${clips.allClip.edges[0].node.end_time.toString()}`}
+        clips={clips.allClip.edges}
         startTime={clips.allClip.edges[0].node.start_time}
         endTime={clips.allClip.edges[0].node.end_time}
       />
