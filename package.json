@@ -23,7 +23,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-h5-audio-player": "^1.2.3",
+    "react-h5-audio-player-bonobo": "^1.0.0",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
