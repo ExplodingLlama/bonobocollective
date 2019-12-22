@@ -18,19 +18,26 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
-          logo {
-            image
-          }
         }
+      }
+      file(name: { eq: "icon" }) {
+        publicURL
       }
     }
   `)
+  // const logo = useStaticQuery(graphql`
+  //   query logoQuery {
+  //     file(name: { eq: "icon" }) {
+  //       relativePath
+  //     }
+  //   }
+  // `)
 
   return (
     <>
       <Header
         siteTitle={data.site.siteMetadata.title}
-        siteLogo={data.site.siteMetadata.logo}
+        siteLogo={data.file.publicURL}
       />
       <div
         style={{

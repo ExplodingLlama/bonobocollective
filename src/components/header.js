@@ -24,7 +24,7 @@ const Header = ({ siteTitle, siteLogo }) => (
           alignItems: "center",
         }}
       >
-        <img src={siteLogo.image} width={50} height={50} />
+        <img src={siteLogo} width={50} height={50} />
         <Link
           to="/"
           style={{
