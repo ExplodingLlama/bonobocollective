@@ -12,8 +12,8 @@ class AudioPlayer extends React.Component {
       clip.audio_link
     }#t=${clip.start_time.toString()},${clip.end_time.toString()}`
     return (
-      <>
-        <div className="rhap_container_outer">
+      <div style={{display: 'flex', flexDirection: 'row'}}>
+        <div className="rhap_container_outer_left">
           <div className="rhap_title">{clip.title}</div>
           <ReactAudioPlayer
             ref={c => (this.player = c)}
@@ -22,20 +22,21 @@ class AudioPlayer extends React.Component {
             endTime={clip.end_time}
           ></ReactAudioPlayer>
         </div>
-        <div>
+        <div className="rhap_container_outer_right">
           {this.props.clips.map((clip, i) => {
             return (
               <div
                 onClick={() => this.setState({ currentClip: i + 1 })}
                 key={clip.node.title}
-                style={{fontFamily: 'Montserrat'}}
+                style={{fontFamily: 'Lato', fontSize: '12px'}}
+                className="rhap_small_box"
               >
                 {clip.node.title}
               </div>
             )
           })}
         </div>
-      </>
+      </div>
     )
   }
 }

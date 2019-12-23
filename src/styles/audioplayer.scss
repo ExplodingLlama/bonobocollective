@@ -3,19 +3,40 @@ $rhap_background-color: #fff !default;
 $rhap_bar-color: #e4e4e4 !default;
 $rhap_time-color: #000 !default;
 
-.rhap_container_outer {
+.rhap_container_outer_left {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  min-width: 300px;
+  width: 70%;
   padding: 10px 15px;
   background-color: $rhap_background-color;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
 }
 
+.rhap_container_outer_right {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: $rhap_background-color;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.rhap_small_box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  background-color: $rhap_background-color;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+div.rhap_small_box:hover {
+  background-color: #eee;
+}
+
+
 .rhap_title {
-  font-family: "Montserrat";
+  font-family: "Lato";
   font-size: 20px;
   padding: 10px 0px 30px 0px;
 }

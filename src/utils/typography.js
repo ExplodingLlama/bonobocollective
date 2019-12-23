@@ -5,11 +5,11 @@ const typography = new Typography({
 
   googleFonts: [
     {
-      name: "Montserrat",
+      name: "Lato",
       styles: ["400"],
     },
     {
-      name: "Merriweather",
+      name: "Montserrat",
       styles: ["400"],
     },
   ],
