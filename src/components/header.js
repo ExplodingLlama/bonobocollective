@@ -32,7 +32,9 @@ const Header = ({ siteTitle, siteLogo }) => (
             textDecoration: `none`,
           }}
         >
-          <h1 style={{ padding: `0rem 1.0875rem` }}>{siteTitle}</h1>
+          <h1 style={{ padding: `0rem 1.0875rem`, fontFamily: "Montserrat" }}>
+            {siteTitle}
+          </h1>
         </Link>
       </div>
     </div>

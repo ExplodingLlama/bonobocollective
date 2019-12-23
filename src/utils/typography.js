@@ -2,14 +2,16 @@ import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.666,
-  headerFontFamily: [
-    "Avenir Next",
-    "Helvetica Neue",
-    "Segoe UI",
-    "Helvetica",
-    "Arial",
-    "sans-serif",
+
+  googleFonts: [
+    {
+      name: "Montserrat",
+      styles: ["400"],
+    },
+    {
+      name: "Merriweather",
+      styles: ["400"],
+    },
   ],
-  bodyFontFamily: ["Georgia", "serif"],
 })
 export default typography
