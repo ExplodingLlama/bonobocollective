@@ -33,6 +33,12 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
+      <link
+        type="application/rss+xml"
+        rel="alternate"
+        title="Understanding Consciousness Podcast"
+        href="https://anchor.fm/s/10fe1db0/podcast/rss"
+      />
       <AudioPlayer clips={clips} />
     </Layout>
   )
