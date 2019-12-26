@@ -9,25 +9,24 @@ import AudioPlayer from "../components/audioplayer"
 const IndexPage = () => {
   const fetchedClips = useStaticQuery(graphql`
     query {
-      allClip {
+      allFeedConsciousnessPodcast(sort: { fields: [isoDate], order: DESC }) {
         edges {
           node {
-            audio_link
             title
-            start_time
-            end_time
+            enclosure {
+              url
+            }
+            pubDate
           }
         }
       }
     }
   `)
 
-  const clips = fetchedClips.allClip.edges.map(clip => {
+  const clips = fetchedClips.allFeedConsciousnessPodcast.edges.map(clip => {
     return {
       title: clip.node.title,
-      audioLink: clip.node.audio_link,
-      startTime: clip.node.start_time,
-      endTime: clip.node.end_time,
+      audioLink: clip.node.enclosure.url,
     }
   })
 

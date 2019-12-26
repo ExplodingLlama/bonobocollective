@@ -7,10 +7,12 @@ class AudioPlayer extends React.Component {
     currentClip: 1,
   }
   render() {
-    const clip = this.props.clips[this.state.currentClip - 1].node
-    const src = `${
-      clip.audio_link
-    }#t=${clip.start_time.toString()},${clip.end_time.toString()}`
+    const clip = this.props.clips[this.state.currentClip - 1]
+    const src = clip.startTime
+      ? `${
+          clip.audioLink
+        }#t=${clip.startTime.toString()},${clip.endTime.toString()}`
+      : clip.audioLink
 
     return (
       <div className="rhap_audio_box">
@@ -19,15 +21,15 @@ class AudioPlayer extends React.Component {
           <ReactAudioPlayer
             ref={c => (this.player = c)}
             src={src}
-            startTime={clip.start_time}
-            endTime={clip.end_time}
+            startTime={clip.startTime || 0}
+            endTime={clip.endTime || 0}
           ></ReactAudioPlayer>
         </div>
         <div className="rhap_container_outer_right">
           {this.props.clips.map((clip, i) => {
             const selectedClipStyle =
               i + 1 === this.state.currentClip
-                ? { backgroundColor: "#eee" }
+                ? { backgroundColor: "#28abe2" }
                 : {}
             const style = {
               ...{ fontFamily: "Lato", fontSize: "12px" },
@@ -36,11 +38,11 @@ class AudioPlayer extends React.Component {
             return (
               <div
                 onClick={() => this.setState({ currentClip: i + 1 })}
-                key={clip.node.title}
+                key={clip.title}
                 style={style}
                 className="rhap_small_box"
               >
-                {clip.node.title}
+                {clip.title}
               </div>
             )
           })}

@@ -17,6 +17,7 @@
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-source-apiserver": "^2.1.4",
     "gatsby-source-filesystem": "^2.1.39",
+    "gatsby-source-rss-feed": "^1.1.1",
     "gatsby-transformer-remark": "^2.6.42",
     "gatsby-transformer-sharp": "^2.3.6",
     "moment": "^2.24.0",
