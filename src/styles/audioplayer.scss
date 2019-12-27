@@ -27,6 +27,17 @@ $rhap_time-color: #000 !default;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
 }
 
+.rhap_container_outer_scroll {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $rhap_background-color;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  max-height: 20em;
+}
+
 @media only screen and (min-width: 768px) {
   .rhap_audio_box {
     flex-direction: row;
@@ -38,6 +49,16 @@ $rhap_time-color: #000 !default;
   .rhap_container_outer_right {
     width: 27%;
   }
+}
+
+.rhap_container_outer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: $rhap_background-color;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
 }
 
 .rhap_small_box {
