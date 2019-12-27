@@ -1,6 +1,7 @@
 import React from "react"
 import ReactAudioPlayer from "react-h5-audio-player-bonobo"
 import "../styles/audioplayer.scss"
+import moment from "moment"
 
 class ConsciousPlayer extends React.Component {
   state = {
@@ -20,7 +21,9 @@ class ConsciousPlayer extends React.Component {
             startTime={clip.startTime || 0}
             endTime={clip.endTime || 0}
           ></ReactAudioPlayer>
-          <div className="rhap_title">{clip.description}</div>
+          <div className="rhap_title" style={{ fontSize: "16px" }}>
+            {clip.description}
+          </div>
         </div>
         <div className="rhap_container_outer_scroll">
           {this.props.clips.map((clip, i) => {
@@ -36,7 +39,7 @@ class ConsciousPlayer extends React.Component {
                 style={style}
                 className="rhap_small_box"
               >
-                {clip.title}
+                {`${clip.title} - ${moment(clip.date).format("DD MMM YYYY")}`}
               </div>
             )
           })}

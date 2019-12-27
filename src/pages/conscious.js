@@ -16,7 +16,7 @@ const ConsciousPod = () => {
             enclosure {
               url
             }
-            pubDate
+            isoDate
             contentSnippet
           }
         }
@@ -29,6 +29,7 @@ const ConsciousPod = () => {
       title: clip.node.title,
       audioLink: clip.node.enclosure.url,
       description: clip.node.contentSnippet,
+      date: clip.node.isoDate,
     }
   })
 
