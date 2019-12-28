@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import "../styles/header.scss"
+
 const Header = ({ siteTitle, siteLogo }) => (
   <header
     style={{
@@ -32,9 +34,15 @@ const Header = ({ siteTitle, siteLogo }) => (
             textDecoration: `none`,
           }}
         >
-          <h1 style={{ padding: `0rem 1.0875rem`, fontFamily: "Montserrat" }}>
-            {siteTitle}
-          </h1>
+          <h1 style={{ padding: `0rem 1.0875rem`, fontFamily: "Montserrat" }}>{siteTitle}</h1>
+        </Link>
+      </div>
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <Link to="/" className="header_link">
+          Home
+        </Link>
+        <Link to="/conscious" className="header_link">
+          Understanding Consciousness Podcast
         </Link>
       </div>
     </div>
