@@ -34,8 +34,10 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <p style={{ fontFamily: "Lato" }}>We make content on science and philosophy</p>
-      <AudioPlayer clips={clips} />
+      <p style={{ fontFamily: "Lato" }}>We make content on science and philosophy. Go to one of the tabs above.</p>
+      {
+        // <AudioPlayer clips={clips} />}
+      }
     </Layout>
   )
 }
