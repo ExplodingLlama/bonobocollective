@@ -18,11 +18,10 @@
 }
 
 .videobox_left {
-  width: 47%;
+  min-width: 200px;
 }
 
 .videobox_right {
-  width: 47%;
   padding-left: 10px;
   font-size: 12px;
   overflow-y: auto;
