@@ -39,7 +39,11 @@ const Videos = () => {
   return (
     <Layout style={{ fontFamily: "Lato" }}>
       <SEO title="Bonobo Collective Videos" />
-      <h2 style={{ fontFamily: "Lato" }}>Bonobo Collective Videos</h2>
+      <h2 style={{ fontFamily: "Lato" }}>Videos by Bonobo Collective</h2>
+      <p style={{ fontFamily: "Lato" }}>
+        What is Information? What's Entropy? How do you compress a data? What is the human mind made of? What is touch?
+        These questions and many others are what stimulate us to make these videos.
+      </p>
       <div>
         {videos.map(video => {
           return (
@@ -51,10 +55,10 @@ const Videos = () => {
                 style={{ textDecoration: "none", color: "black" }}
               >
                 <div style={{ fontSize: "18px", fontWeight: "bold" }}>{video.title}</div>
-                <p style={{ fontSize: "10px" }}>{moment(video.date).format("DD MMM YYYY")}</p>
+                <div style={{ fontSize: "10px" }}>{moment(video.date).format("DD MMM YYYY")}</div>
                 <div className="videobox_inner">
                   <div className="videobox_left">
-                    <img src={video.thumbUrl} height="100" />
+                    <img style={{ borderRadius: "3px" }} src={video.thumbUrl} height="100" />
                   </div>
                   <div className="videobox_right">{video.description}</div>
                 </div>
