@@ -41,14 +41,19 @@ const Header = ({ siteTitle, siteLogo }) => (
         <Link to="/" className="header_link">
           Home
         </Link>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.youtube.com/channel/UCeC_NXNnm65PFIPOpPb0U5g"
-          className="header_link"
-        >
-          Video Channel
-        </a>
+        <Link to="/videos" className="header_link">
+          Videos
+        </Link>
+        {
+          // <a
+          //   target="_blank"
+          //   rel="noopener noreferrer"
+          //   href="https://www.youtube.com/channel/UCeC_NXNnm65PFIPOpPb0U5g"
+          //   className="header_link"
+          // >
+          //   Video Channel
+          // </a>
+        }
         <Link to="/conscious" className="header_link">
           Understanding Consciousness Podcast
         </Link>

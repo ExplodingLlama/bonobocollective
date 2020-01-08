@@ -21,6 +21,15 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-source-youtube-v2`,
+      options: {
+        channelId: [`UCeC_NXNnm65PFIPOpPb0U5g`],
+        apiKey: process.env.YOUTUBE_API_KEY,
+        maxVideos: 50,
+      },
+    },
+
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,

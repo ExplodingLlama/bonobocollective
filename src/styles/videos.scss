@@ -1,0 +1,29 @@
+.videobox {
+  box-sizing: border-box;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 1em;
+  font-family: "Lato";
+}
+
+.videobox_inner {
+  display: flex;
+  flex-direction: row;
+  max-height: 100px;
+}
+
+.videobox:hover {
+  background-color: #eee;
+}
+
+.videobox_left {
+  width: 47%;
+}
+
+.videobox_right {
+  width: 47%;
+  padding-left: 10px;
+  font-size: 12px;
+  overflow-y: scroll;
+}
