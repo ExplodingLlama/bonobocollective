@@ -34,7 +34,10 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <p style={{ fontFamily: "Lato" }}>We make content on science and philosophy. Go to one of the tabs above.</p>
+      <p style={{ fontFamily: "Lato" }}>
+        We make content on science and philosophy. Our current focus is on information theory, consciousness,
+        electromagnetism and neuroscience. Go to one of the tabs above to explore these topics.
+      </p>
       {
         // <AudioPlayer clips={clips} />}
       }
