@@ -86,13 +86,13 @@ module.exports = {
       options: {
         url: `https://anchor.fm/s/10fe1db0/podcast/rss`,
         name: `ConsciousnessPodcast`,
-        // Optional
-        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
-        // parserOption: {
-        //   customFields: {
-        //     item: ["itunes:duration"],
-        //   },
-        // },
+      },
+    },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `https://anchor.fm/s/128038a8/podcast/rss`,
+        name: `BonoboCollectiveTalks`,
       },
     },
 

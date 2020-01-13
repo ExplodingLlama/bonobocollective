@@ -44,6 +44,9 @@ const Header = ({ siteTitle, siteLogo }) => (
         <Link to="/videos" className="header_link">
           Videos
         </Link>
+        <Link to="/talks" className="header_link">
+          Talks
+        </Link>
         {
           // <a
           //   target="_blank"
