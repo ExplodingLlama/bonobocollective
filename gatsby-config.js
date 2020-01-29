@@ -49,6 +49,17 @@ module.exports = {
     {
       resolve: "gatsby-source-apiserver",
       options: {
+        url: `https://us-central1-bonobocollective-c451a.cloudfunctions.net/getAllVideoPosts`,
+        method: "get",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        name: `videopost`,
+      },
+    },
+    {
+      resolve: "gatsby-source-apiserver",
+      options: {
         url: `https://us-central1-bonobocollective-c451a.cloudfunctions.net/getAllPosts`,
         method: "get",
         headers: {

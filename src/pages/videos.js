@@ -48,8 +48,8 @@ const Videos = () => {
         {videos.map(video => {
           return (
             <div className="videobox" key={video.videoId}>
-              <a
-                href={`https://youtu.be/${video.videoId}`}
+              <Link
+                to={`video/${video.videoId}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none", color: "black" }}
@@ -58,11 +58,18 @@ const Videos = () => {
                 <div style={{ fontSize: "10px" }}>{moment(video.date).format("DD MMM YYYY")}</div>
                 <div className="videobox_inner">
                   <div className="videobox_left">
-                    <img style={{ borderRadius: "3px" }} src={video.thumbUrl} height="100" />
+                    <a
+                      href={`https://youtu.be/${video.videoId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: "none", color: "black" }}
+                    >
+                      <img style={{ borderRadius: "3px" }} src={video.thumbUrl} height="100" />
+                    </a>
                   </div>
                   <div className="videobox_right">{video.description}</div>
                 </div>
-              </a>
+              </Link>
             </div>
           )
         })}
