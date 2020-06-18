@@ -49,7 +49,7 @@ const Videos = () => {
           return (
             <div className="videobox" key={video.videoId}>
               <Link
-                to={`video/${video.videoId}`}
+                to={`https://youtu.be/${video.videoId}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none", color: "black" }}
