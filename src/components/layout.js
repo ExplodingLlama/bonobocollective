@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
           title
         }
       }
-      file(name: { eq: "icon" }) {
+      file(name: { eq: "banner" }) {
         publicURL
       }
     }

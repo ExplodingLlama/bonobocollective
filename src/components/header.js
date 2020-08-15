@@ -26,7 +26,7 @@ const Header = ({ siteTitle, siteLogo }) => (
           alignItems: "center",
         }}
       >
-        <img src={siteLogo} width={50} height={50} />
+        <img src={siteLogo} />
         <Link
           to="/"
           style={{
@@ -34,12 +34,14 @@ const Header = ({ siteTitle, siteLogo }) => (
             textDecoration: `none`,
           }}
         >
-          <h1 style={{ padding: `0rem 1.0875rem`, fontFamily: "Montserrat" }}>{siteTitle}</h1>
         </Link>
       </div>
       <div style={{ display: "flex", flexDirection: "row" }}>
         <Link to="/" className="header_link">
           Home
+        </Link>
+        <Link to="https://blog.wikilearnproductions.com" className="header_link">
+          Blog
         </Link>
         <Link to="/videos" className="header_link">
           Videos

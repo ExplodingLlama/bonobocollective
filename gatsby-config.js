@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Bonobo Collective`,
+    title: `Wikilearn Productions`,
     logo: { link: `/`, image: `/icon.png` },
     description: `We make content on science, philosophy and learning. Our current focus is on information theory, consciousness, electromagnetism and neuroscience. Go to one of the tabs above to explore these topics.`,
     author: `Ratandeep Singh`,
