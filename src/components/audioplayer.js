@@ -29,7 +29,7 @@ class AudioPlayer extends React.Component {
           {this.props.clips.map((clip, i) => {
             const selectedClipStyle =
               i + 1 === this.state.currentClip
-                ? { backgroundColor: "#28abe2" }
+                ? { backgroundColor: "#FFD23E" }
                 : {}
             const style = {
               ...{ fontFamily: "Lato", fontSize: "12px" },
