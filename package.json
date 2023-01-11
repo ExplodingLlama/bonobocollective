@@ -19,7 +19,7 @@
     "gatsby-source-filesystem": "^2.1.39",
     "gatsby-source-rss-feed": "^1.1.1",
     "gatsby-source-youtube-v2": "^1.0.1",
-    "gatsby-transformer-remark": "^2.6.42",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.3.6",
     "moment": "^2.24.0",
     "node-sass": "^4.14.1",
